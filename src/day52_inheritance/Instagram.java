@@ -2,14 +2,32 @@ package day52_inheritance;
 
 import com.sun.org.apache.xalan.internal.xsltc.trax.XSLTCSource;
 
-public class Instagram extends  MobileApp{
-    public void postPhoto() {
-        System.out.println("Posting photo on Instagram");
+public class MobileApp {
+    private String name;
+    private double version;
+
+    public String getName() {
+        return name;
     }
 
-    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getVersion() {
+        return version;
+    }
+
+    public void setVersion(double version) {
+        this.version = version;
+    }
+
+    protected boolean download() {
+        System.out.println("App: " + name +" version: " + version +" is downloaded");
+        return true;
+    }
+
     public void useTheApp(int minutes) {
-        System.out.println("Using instagram app features");
-        postPhoto();
+        System.out.println("Using " + name + " app for " + minutes + " minutes");
     }
 }
