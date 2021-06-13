@@ -1,6 +1,7 @@
 package day53_inheritance.tesla;
 
 public class ElectricCar {
+<<<<<<< HEAD
     private String make;
     private String model;
     private double price;
@@ -85,3 +86,6 @@ public class ElectricCar {
         this.year = year;
     }
 }
+=======
+}
+>>>>>>> day53_inheritance.tesla
