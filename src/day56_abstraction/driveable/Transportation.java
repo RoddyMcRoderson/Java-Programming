@@ -1,4 +1,4 @@
-package day56_abstraction;
+package day56_abstraction.driveable;
 
 public abstract class  Transportation {
     public abstract void transportPeople();
@@ -8,5 +8,9 @@ public abstract class  Transportation {
     }
     public void stop(){
         System.out.println("Shut off the engine");
+    }
+
+    public void land() {
+        System.out.println("Plane ");
     }
 }
