@@ -4,14 +4,19 @@ public class ElementaryStudent {
     private String name;
     private int age;
 
+    public ElementaryStudent() {}
+
     public ElementaryStudent(String name, int age) {
         setName(name);
-        setAge();
+        setAge(age);
     }
 
     @Override
     public String toString() {
-        return "ElementaryStudent{" + "name='" + name + '\'' + age + '\'';
+        return "ElementaryStudent{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 
     public String getName() {
@@ -19,10 +24,12 @@ public class ElementaryStudent {
     }
 
     public void setName(String name) {
-        //check if name is null first
-        if(name == null || name.isEmpty()){
+        //check if name is null first, otherwise we might get nullpointer exception
+        if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty or null");
         }
+        //if name is all numbers, or starts with number
+
         this.name = name;
     }
 
@@ -31,8 +38,8 @@ public class ElementaryStudent {
     }
 
     public void setAge(int age) {
-        if(age < 5 || age >12 ){
-            throw new IllegalArgumentException("Age cannot be <5 or >12");
+        if (age < 5 || age > 12) {
+            throw new IllegalArgumentException("Age cannot be < 5 or > 12");
         }
         this.age = age;
     }
