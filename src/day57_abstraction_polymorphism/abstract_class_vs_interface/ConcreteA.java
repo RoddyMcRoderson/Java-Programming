@@ -1,6 +1,6 @@
-package day57_abstraction_polymorphism;
+package day57_abstraction_polymorphism.abstract_class_vs_interface;
 
-public class ConcreteA extends AbstractA implements InterfaceA{
+public class ConcreteA extends AbstractA implements InterfaceA {
 
     @Override
     public void absMethodA() {
